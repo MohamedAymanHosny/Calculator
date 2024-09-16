@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div class="display">
+                    <input type="text" name="display">
+                </div>
+                <div>
+                    <input type="button" value="AC" onclick="clearDisplay()" class="operator">
+                    <input type="button" value="DE" onclick="deleteLast()" class="operator">
+                    <input type="button" value="." onclick="appendChar('.')" class="operator">
+                    <input type="button" value="/" onclick="appendChar('/')" class="operator">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="appendChar('7')">
+                    <input type="button" value="8" onclick="appendChar('8')">
+                    <input type="button" value="9" onclick="appendChar('9')">
+                    <input type="button" value="*" onclick="appendChar('*')" class="operator">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="appendChar('4')">
+                    <input type="button" value="5" onclick="appendChar('5')">
+                    <input type="button" value="6" onclick="appendChar('6')">
+                    <input type="button" value="-" onclick="appendChar('-')" class="operator">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="appendChar('1')">
+                    <input type="button" value="2" onclick="appendChar('2')">
+                    <input type="button" value="3" onclick="appendChar('3')">
+                    <input type="button" value="+" onclick="appendChar('+')" class="operator">
+                </div>
+                <div>
+                    <input type="button" value="00" onclick="appendChar('00')">
+                    <input type="button" value="0" onclick="appendChar('0')">
+                    <input type="button" value="=" onclick="calculate()" class="equal operator">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function appendChar(char) {
+            document.forms[0].display.value += char;
+        }
+
+        function clearDisplay() {
+            document.forms[0].display.value = '';
+        }
+
+        function deleteLast() {
+            var displayValue = document.forms[0].display.value;
+            document.forms[0].display.value = displayValue.slice(0, -1);
+        }
+
+        function calculate() {
+            var displayValue = document.forms[0].display.value;
+            try {
+                var result = eval(displayValue);
+                if (!isFinite(result)) {
+                    throw "Error, can't divide by zero";
+                }
+                document.forms[0].display.value = result;
+            } catch (error) {
+                alert(error);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

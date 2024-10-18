@@ -1,16 +1,26 @@
-# Calculator Project
+<h1 align="center">Calculator Project</h1>
 
-This is a simple calculator application developed using HTML, CSS, and JavaScript. The application provides basic arithmetic operations such as addition, subtraction, multiplication, and division.
+## Project Description
+This project implements a simple **Calculator** using HTML, CSS, and JavaScript. The application allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division through an intuitive user interface.
 
-## Overview
+## Features
 
-The calculator consists of a user-friendly interface that allows users to perform calculations through buttons representing numbers and operations. It handles user input and displays the result dynamically.
+1. **Basic Operations**:
+   - **Addition**: Users can add numbers using the `+` button.
+   - **Subtraction**: Users can subtract numbers using the `-` button.
+   - **Multiplication**: Users can multiply numbers using the `*` button.
+   - **Division**: Users can divide numbers using the `/` button.
+
+2. **User Interaction**:
+   - **Input Display**: The current calculation is displayed in a dedicated input field.
+   - **Clear Display**: Users can clear the input using the `AC` button.
+   - **Delete Last Character**: Users can remove the last entered character using the `DE` button.
 
 ## Project Structure
 
 The project contains the following files:
 
-- `index.html`: The main HTML file containing the calculator structure.
+- `index.html`: The main HTML file containing the calculator structure and user interface.
 - `style.css`: The CSS file for styling the calculator interface.
 - `script.js`: The JavaScript file that contains the logic for the calculator operations.
 
@@ -18,7 +28,7 @@ The project contains the following files:
 
 ### HTML (`index.html`)
 
-The HTML file defines the structure of the calculator. Here are some key components:
+The HTML file defines the structure of the calculator. Key components include:
 
 - **Form and Display**:
     ```html
@@ -26,13 +36,13 @@ The HTML file defines the structure of the calculator. Here are some key compone
         <input type="text" name="display">
     </div>
     ```
-    This input field is used to display the current value or result of the calculations.
+    This input field displays the current value or result of the calculations.
 
 - **Calculator Buttons**:
     ```html
     <input type="button" value="1" onclick="appendChar('1')">
     ```
-    Each button calls the `appendChar` function with its value when clicked, allowing the user to input numbers and operations.
+    Each button calls the `appendChar` function with its value when clicked, allowing users to input numbers and operations.
 
 ### CSS (`style.css`)
 
@@ -88,7 +98,7 @@ The JavaScript code contains the logic for the calculator operations:
     ```
     This function evaluates the expression in the display using the `eval` function, checks for division by zero, and displays the result or an error message.
 
-## How to Run the Project
+## How to Run
 
 1. Clone the repository or download the files.
 2. Open the `index.html` file in a web browser.
@@ -96,8 +106,8 @@ The JavaScript code contains the logic for the calculator operations:
 
 ## Future Improvements
 
-- Implement a graphical user interface (GUI) for better user interaction.
-- Add advanced mathematical functions like square root, exponentiation, etc.
+- Implement a graphical user interface (GUI) for enhanced user interaction.
+- Add advanced mathematical functions such as square root and exponentiation.
 - Improve error handling for more robust calculations.
 
 ## License

@@ -1,4 +1,4 @@
-<h1 align="center">Calculator Project</h1>
+<h1 align="center">Calculator</h1>
 
 ## Project Description
 This project implements a simple **Calculator** using HTML, CSS, and JavaScript. The application allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division through an intuitive user interface.
